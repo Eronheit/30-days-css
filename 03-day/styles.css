@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Syncopate:wght@700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background: #f3f6f9;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.container {
+  height: 500px;
+  width: 100%;
+  max-width: 750px;
+  border-radius: 8px;
+  background: #fff;
+  border: 1px solid rgb(237, 242, 249);
+  box-shadow: rgb(15 34 58 / 12%) 0px 2px 4px;
+  padding: 20px;
+
+  z-index: -4;
+  
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.card {
+  flex: 1;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card:first-child {
+  background: #000;
+}
+
+.card:first-child span {
+  font-family: 'Syncopate', sans-serif;
+  flex-direction: column;
+  font-size: 60px;
+  text-align: center;
+  
+  color: transparent;
+  background: radial-gradient(
+    circle farthest-corner at center center,
+    #812,
+    #111
+  ) no-repeat;
+  -webkit-background-clip: text;
+}
+
+.card:not(:first-child) {
+  font-size: 6rem;
+  font-weight: bold;
+  text-align: center;
+  color: transparent;
+  position: relative;
+
+  background-image: url(https://i.ytimg.com/vi/ePw190n93Dg/maxresdefault.jpg);
+
+  -webkit-background-clip: text;
+}
+
+.card:not(:first-child):before {
+  background-image: inherit;
+  border-radius: 8px;
+
+  position: absolute;
+  content: '';
+  z-index: -2;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.card:not(:first-child):after {
+  background-color: #000;
+
+  position: absolute;
+  content: '';
+  z-index: -1;
+  top: 2rem;
+  right: 2rem;
+  bottom: 2rem;
+  left: 2rem;
+}
